@@ -6,11 +6,13 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.sustav.rabbit.rabbitmqconsumer.json.CustomDateDeserializer;
 import lombok.Data;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Data
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@ToString
 public class Employee {
 
     @JsonProperty(value = "employee_id")
@@ -26,5 +28,14 @@ public class Employee {
     }
 
     public Employee() {
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId='" + employeeId + '\'' +
+                ", name='" + name + '\'' +
+                ", birthDate=" + birthDate +
+                '}';
     }
 }

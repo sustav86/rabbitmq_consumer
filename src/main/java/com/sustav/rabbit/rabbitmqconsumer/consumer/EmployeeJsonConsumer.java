@@ -26,5 +26,6 @@ public class EmployeeJsonConsumer {
         }
 
         logger.info("Rabbit fixed sent {}", employee);
+//        System.out.println(employee);
     }
 }
