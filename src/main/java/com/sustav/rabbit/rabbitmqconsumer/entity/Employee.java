@@ -8,7 +8,11 @@ import com.sustav.rabbit.rabbitmqconsumer.json.CustomDateDeserializer;
 import lombok.Data;
 import lombok.ToString;
 
+import java.lang.reflect.Method;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 @Data
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
@@ -38,4 +42,5 @@ public class Employee {
                 ", birthDate=" + birthDate +
                 '}';
     }
+
 }
